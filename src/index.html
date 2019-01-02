@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link rel="stylesheet" href="src/assets/css/styles.css">
+    <link rel="stylesheet" href="src/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="src/assets/fonts/fonts.css">
+    <link href="node_modules/@angular/material/prebuilt-themes/indigo-pink.css" rel="stylesheet">
+</head>
+
+<page-overlay-spinner id="page-overlay-spinner">
+</page-overlay-spinner>
+
+<body>
+    <app-header></app-header>
+    <div class="container-fluid" id="mainContentWrapper">
+        <div class="row" id="main-component-page">
+            <div class="col-lg-3 col-md-3 col-sm-3">
+                <left-navbar class="left-navigation">
+
+                </left-navbar>
+            </div>
+            <!-- Just dummy content like in the animated gif -->
+            <div class="col-lg-9 col-md-9 col-sm-9 h-100">
+                <app-component>
+
+                </app-component>
+                <!--
+        <div class="circle"></div>
+        <div class="text">
+            <span></span><span></span>
+        </div>
+        <div class="square-top"></div>
+        <div class="square-behind"></div>
+            -->
+            </div>
+        </div>
+    </div>
+    <app-footer class="footer"></app-footer>
+</body>
+
+</html>

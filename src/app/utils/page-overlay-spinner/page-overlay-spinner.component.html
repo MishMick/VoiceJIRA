@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<div id="main-overlay-spinner" 
+class="overlay-spinner"
+(keydown.tab)="spinnerClicked($event)" (keydown.shift.tab)="spinnerClicked($event)">
+    <div class="loading">
+      <div class="loading-spinner"></div>
+      <div id="main-overlay-copy" class="loading-copy">
+        <div id="main-overlay-text"></div>
+      </div>
+    </div>
+</div>
+  

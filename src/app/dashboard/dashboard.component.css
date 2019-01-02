@@ -1,0 +1,128 @@
+.bp-amount-container {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.bp-memo-container {
+    width: 100%;
+    margin-bottom: 0.4rem;
+}
+
+.bp-frequency-dropdown-container {
+    width: 75%;
+    margin-bottom: 0.4rem;
+}
+
+.bp-memo-container input {
+    width: 75%;
+}
+
+.bp-amount-container input {
+    width: 75%;
+}
+
+.error {
+    border: .1rem solid #83000a !important;
+    background-color: rgba(131, 0, 10, .05) !important;
+}
+
+.capture-memo {
+    height: 10rem;
+    width: 36rem;
+    border: 0.1rem solid #929292;
+    background-color: #ffffff;
+    padding-left: 1.6rem;
+}
+
+.capture-amt {
+    height: 4rem;
+    width: 28rem;
+    border: 1px solid #929292;
+    background-color: #ffffff;
+    padding-left: 6.5rem;
+}
+
+.capture-memo.error .capture-amt.error {
+    border: .1rem solid #83000a !important;
+    background-color: rgba(131, 0, 10, .05) !important;
+}
+
+.capture-memo:hover,
+.capture-memo:focus .capture-amt:hover,
+.capture-amt:focus {
+    border: .1rem solid #376798;
+}
+
+.bpCaptureAmountCurrency {
+    position: relative;
+    right: 73%;
+    border-right: 1px solid #c9c9c9;
+    padding-bottom: 0.4rem;
+    display: inline-block;
+    width: 4.5rem;
+    line-height: 1.9rem;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    margin-top: -0.3rem;
+    padding-left: 0.5rem;
+}
+
+.radio-field-set {
+    border: none;
+    padding: 0;
+}
+
+@media (max-width: 479px) {
+    .radio-field-set {
+        border: none;
+        padding: 0;
+    }
+    .radio-group-view {
+        display: flex;
+    }
+    .radio-recurring-no-div {
+        width: 13%;
+    }
+    .radio-recurring-no-div label,
+    .radio-recurring-yes-div label {
+        margin: 0;
+    }
+    .capture-recurring-no {
+        width: auto;
+    }
+    .capture-recurring-yes {
+        width: auto;
+    }
+    .recurring-adjust {
+        width: 100% !important;
+        color: #333333;
+        font-size: 1rem;
+        line-height: 1.35rem;
+        font-weight: normal;
+    }
+    .radio-recurring-no-div .radio-recurring-yes-div {
+        width: 35%;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 759px) {}
+
+@media (min-width: 760px) and (max-width: 785px) {
+    .radio-group-view {
+        margin: 0;
+    }
+    .capture-recurring-no,
+    .capture-recurring-yes {
+        margin: 1rem 0;
+    }
+    .radio-recurring-no-div,
+    .radio-recurring-yes-div {
+        width: 35%;
+    }
+}
+
+@media (min-width: 760px) and (max-width: 959px) {
+    .radio-recurring-no-div {
+        width: 25%;
+    }
+}

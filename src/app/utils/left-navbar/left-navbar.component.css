@@ -1,0 +1,36 @@
+/* Left Navigation */
+
+.list-unstyled {
+    padding-left: 0;
+    list-style: none
+}
+
+.left-navigation-title {
+    background: rgb(62, 80, 93);
+    padding: 1.5rem 2rem;
+}
+
+.left-navigation-title p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.left-navigation-links ul li {
+    border-bottom: 0.1rem solid #cccccc;
+    background-color: #ffffff;
+    padding: 1.5rem 2rem;
+}
+
+.left-navigation-links a,
+.left-navigation-links a:hover,
+.left-navigation-links a:focus,
+.left-navigation-links a:active {
+    text-decoration: underline;
+    color: #000000;
+    font-size: 1.4rem;
+}
+
+/* End Left Navigation */

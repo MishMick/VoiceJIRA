@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<div class="noOutline relativePosition">
+    <div id="selectDropdownLabel" #target tabindex="0" class="select-target select-theme-default selec-abutted select-abutted-left select-element-attached-left select-target-attached-left select-abutted-top select-element-attached-top selec-target-attached-bottom">
+        <div class="selected-text">{{selectedText}}</div>
+        <i class="arrow down"></i>
+        <span [ngClass]="isOpen? 'dropdownOpen':''"></span>
+    </div>
+    <div #drop [ngClass]="isOpen? '': 'hideOptions'" class="select select-theme-default options">
+        <div class="select-content">
+            <ul id="selectDropdown-list" class="select-options">
+                <li *ngFor="let option of itemList; let isLast= last;"
+                    [ngClass]="(option.value == defaultSelected)? 'selec-option-selected' : ''"
+                    tabindex="0"
+                    class="select-option noOutline" attr.data-text="{{option.label}}"
+                    attr.data-value="{{option.value}}">{{option.label}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+    "environments":{
+        "local": {
+            "envName": "LOCAL",
+            "billerURL": "/src/app/stub/biller-list.json"
+        },
+        "dev": {
+            "envName": "DEV"
+        },
+        "prod": {
+            "envName": "PROD"
+        }
+    }
+}

@@ -1,0 +1,46 @@
+.overlay-spinner {
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.2);
+  }
+  
+  .loading {
+    padding: 22rem 0;
+    position: relative;
+  }
+  
+  .loading-copy {
+    font-size: 1.4rem;
+    margin: auto;
+    text-align: center;
+    width: 30%;
+  }
+  
+  @keyframes loading-spinner {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-spinner::before {
+    animation: loading-spinner 1.1s cubic-bezier(.35, .22, .47, .68) infinite;
+    border: 0.3rem solid transparent;
+    border-left-color: #454545;
+    border-top-color: #454545;
+    border-radius: 50%;
+    box-sizing: border-box;
+    content: '';
+    height: 3.5rem;
+    left: 50%;
+    margin: 0 0 0 -1.75rem;
+    position: absolute;
+    top: 17.5rem;
+    width: 3.5rem;
+  }
+  

@@ -1,0 +1,73 @@
+{
+    "responseInfo":{
+        "reasons":[
+            {
+            "code": "000",
+            "type": "SUCCESS"
+            }
+        ]
+    },
+
+    "payeeList": [
+        {
+            "payeeIdIndex": "vEd",
+            "commonPayeeDetail":{
+                "payeeType":"1"
+            },
+            "billPayeeDetail":{
+                "customerReference":"DIGI",
+                "paymentType":"T",
+                "billPaymentCurrency": "INR",
+                "creditCardType":[
+                    "MC",
+                    "MG",
+                    "MP",
+                    "VC",
+                    "VP"
+                ],
+                "isCreditCardPaymentAccepted": false
+            },
+            "isPayeeMaintainableOnWeb": true
+        },
+        {
+            "payeeIdIndex": "aBc",
+            "commonPayeeDetail":{
+                "payeeType":"1"
+            },
+            "billPayeeDetail":{
+                "customerReference":"DIGI",
+                "paymentType":"T",
+                "billPaymentCurrency": "INR",
+                "creditCardType":[
+                    "MC",
+                    "MG",
+                    "MP",
+                    "VC",
+                    "VP"
+                ],
+                "isCreditCardPaymentAccepted": false
+            },
+            "isPayeeMaintainableOnWeb": true
+        },
+        {
+            "payeeIdIndex": "xYz",
+            "commonPayeeDetail":{
+                "payeeType":"1"
+            },
+            "billPayeeDetail":{
+                "customerReference":"DIGI",
+                "paymentType":"T",
+                "billPaymentCurrency": "INR",
+                "creditCardType":[
+                    "MC",
+                    "MG",
+                    "MP",
+                    "VC",
+                    "VP"
+                ],
+                "isCreditCardPaymentAccepted": false
+            },
+            "isPayeeMaintainableOnWeb": true
+        }
+    ]
+}

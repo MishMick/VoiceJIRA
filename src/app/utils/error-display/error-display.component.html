@@ -1,0 +1,66 @@
+<div [ngClass]="isBackEndError ? '' : 'hide'" class="alert alert-danger bottom-margin-30" *ngIf="isBackEndError">
+    <i class="icon icon-circle-error"></i>
+    <div class="alert-text">
+        <span class="sr-only">Error</span>
+        <span class="error-copy">Error Message</span>
+    </div>
+</div>
+
+<div [ngClass]="isAllMultipleFail ? '' : 'hide'" class="alert alert-danger bottom-margin-30" *ngIf="isAllMultipleFail">
+    <i class="icon icon-circle-error"></i>
+    <div class="alert-text">
+        <span class="sr-only">Error</span>
+        <span class="error-copy">Error Message</span>
+    </div>
+</div>
+
+<div [ngClass]="isWarning ? '' : 'hide'" class="alert alert-warn bottom-margin-30" *ngIf="isWarning">
+    <i class="icon icon-circle-error"></i>
+    <div class="alert-text">
+        <span class="sr-only">Warning</span>
+        <span class="error-copy">Warning Message</span>
+    </div>
+</div>
+
+<div [ngClass]="isSuccess ? '' : 'hide'" class="alert alert-success bottom-margin-30" *ngIf="isSuccess">
+    <i class="icon icon-circle-confirmation"></i>
+    <div class="alert-text">
+        <span class="sr-only">Success</span>
+        <span class="error-copy">Success Message</span>
+    </div>
+</div>
+
+<!--SINGLE ERROR DISPLAY-->
+<div [ngClass]="isSingleError? '' : 'hide'" class="alert single-error-display-danger" *ngIf="isSingleError">
+    <div class="icon single-icon icon-danger icon-circle-delete"></div>
+    <div class="alert-text">
+        <span class="sr-only">Error</span>
+        <span class="error-copy">Error message</span>
+    </div>
+</div>
+
+<div [ngClass]="isSingleSuccess? '':'hide'" class="alert single-error-display-success" *ngIf="isSingleSuccess">
+    <div class="icon single-icon icon-success icon-circle-confirmation"></div>
+    <div class="alert-text">
+        <span class="sr-only"></span>
+        <span class="error-copy">SIngle success copy</span>
+    </div>
+</div>
+
+<div [ngClass]="isSingleWarning? '':'hide'" class="alert single-error-display-warning" *ngIf="isSingleWarning">
+    <div class="icon single-icon icon-warning icon-circle-error"></div>
+    <div class="alert-text">
+        <span class="sr-only"></span>
+        <span class="single-warning-copy">Single warning copy</span>
+    </div>
+</div>
+
+<div [ngClass]="isSingleErrorInline ? '':'hide'" class="alert single-error-display-danger" *ngIf="isSingleErrorInline">
+    <i class="icon single-icon icon-danger icon-circle-delete inline-error"></i>
+    <div class="alert-text">
+        <span class="single-error-copy">
+            <span id="sr-only-error" class="sr-only">Error</span>
+            {{singleErrorInlineCopy}}
+        </span>
+    </div>
+</div>

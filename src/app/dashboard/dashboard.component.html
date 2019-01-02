@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<div>
+    <!-- STEP INDICATOR -->
+    <div class="step-counter">
+        <div class="step-indicator" [ngClass]="'step-indicator-' + stepIndicator"></div>
+    </div>
+    <div class="component">
+        <h2>Dashboard</h2>
+        <div class="description">
+        </div>
+        <div class="line-separator"></div>
+        <form autocomplete="off" [formGroup]="bpForm">
+            <div formArrayName="payments">
+                <div *ngFor="let payment of payments.controls; let i=index" [formGroupName]="i">
+                    <!--For Desktop-->
+                    <div class="d-flex justify-content-between mobile-hide">
+
+
+                    </div>
+                    <!-- End Desktop -->
+
+                    <!-- For small view port -->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 center">
+                            <div *ngIf='!isRecordingInProgress' class="button-slate " (click)="startRecording()">
+                                <i class="fas fa-microphone"></i> Start recording
+                            </div>
+
+                            <div *ngIf='isRecordingInProgress' class="button-slate " (click)="stopRecording()">
+                                <i class="fas fa-microphone"></i> Stop recording
+                            </div>
+                        </div>
+                    </div>
+                    <!-- REFERENCE FIELD -->
+                    <div class="row" *ngIf="payments.controls.length == 1">
+                        <div class="col-lg-4 col-md-4 pt-3">
+                            <label id="memo-label">
+                                Memo
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="bp-memo-container">
+                                <textarea type="text" class="capture-memo" [(ngModel)]="speechData" [ngModelOptions]="{standalone: true}"
+                                    id="myMemo" tabindex="0" name="memo-{{i+1}}" #memo>
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1"></div>
+                    </div>
+                    <!-- END REFERENCE FIELD-->
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 center">
+                            <div *ngIf='!isRecordingInProgress' class="button-slate " (click)="submit()">
+                                Submit memo
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4 pt-3">
+                            <label id="frequency-label">
+                                Frequency label
+                            </label>
+                        </div>
+                        <div class="col-lg-7 col-md-7">
+                            <div class="bp-frequency-dropdown-container">
+                                <simple-dropdown #simpleDropDown [itemList]="frequencyList" formControlName="selectedFrequency"
+                                    [defaultSelected]="payment.controls['selectedFrequency'].value" (selectedValue)="setFrequencyListValue($event, payment)">
+                                </simple-dropdown>
+                            </div>
+                        </div>
+                        <div class="col-lg-1 col-md-1"></div>
+                    </div>
+                -->
+                    <!-- End frequency component -->
+                    <!-- End small view port -->
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
