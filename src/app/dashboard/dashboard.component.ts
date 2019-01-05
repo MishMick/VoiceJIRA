@@ -273,7 +273,6 @@ export class DashboardComponent extends AppComponent implements OnInit, AfterVie
     let requestData = "id="+id+ "&text=" + this.speechData + '&length=' + wordCount;
     this._httpService.executeRequest('bp.getSubmitResponse', requestData).subscribe(
       (data: any) => {
-        console.warn("Here");
         this.zone.run(() => {
           console.warn("Data ",data);
           this.recordingSaved = true;
