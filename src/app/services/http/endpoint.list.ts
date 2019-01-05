@@ -8,7 +8,7 @@ bp:{
         },
         getSubmitResponse: {
             method: "GET",
-            url: "http://enterwebsite/nlp?id=1",
+            url: "http://localhost:9000/nlp?",
             cache: false,
             appendToURI: true
         }

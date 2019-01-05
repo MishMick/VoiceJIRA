@@ -31,8 +31,7 @@ export class HttpService {
          let endPoint = this.endPointService.getEndPoint(endPointName);
          let options: any;
          let envConfig: any = process.env.envConfig;
-
-         if (envConfig.envName !== 'LOCAL' || endPoint.appendToURL === true) {
+         if (endPoint.appendToURI === true) {
              let initialHeaders = this._httpHelper.addHeaders(endPoint);
              options = {
                  method: endPoint.method,
@@ -49,6 +48,7 @@ export class HttpService {
                  body: this.isNullOrUndefined(data) ? null : data
              };
          }
+         console.warn("Request ",this.request(options));
          return this.request(options);
      }
 
@@ -58,31 +58,6 @@ export class HttpService {
              isNullOrUndefined = true;
          }
          return isNullOrUndefined;
-     }
-
-     executeRequestWithAppend(endPointName: string, append: string, data: any): Observable<any> {
-         let endPoint = this.endPointService.getEndPoint(endPointName);
-         let options: any;
-         let envConfig: any = process.env.envConfig;
-
-         if (envConfig.envName !== 'LOCAL' || endPoint.appendToURL === true) {
-            let initialHeaders = this._httpHelper.addHeaders(endPoint);
-            options = {
-                method: endPoint.method,
-                url: endPoint.url + append,
-                headers: initialHeaders,
-                body: this.isNullOrUndefined(data) ? null : data
-            };
-         } else {
-           let initialHeaders = this._httpHelper.addHeaders(endPoint);
-           options = {
-                method: endPoint.method,
-                url: endPoint.url,
-                headers: initialHeaders,
-                body: this.isNullOrUndefined(data) ? null : data
-            };
-         }
-         return this.request(options);
      }
 
      request(args: any): Observable<any> {

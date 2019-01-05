@@ -268,20 +268,28 @@ export class DashboardComponent extends AppComponent implements OnInit, AfterVie
       self.pageOverlaySpinnerComponent.setOverlayCopy(self.content.pageOverlayCopy);
     }, 0);
 
-    let id = "UI_" + Math.floor(Math.random() * 100000);
-
-    this._httpService.executeRequest('bp.getSubmitResponse', "").subscribe(
+    let id = "voiceData_" + Math.floor(Math.random() * 100000);
+    const wordCount = this.getWordCount(this.speechData);
+    let requestData = "id="+id+ "&text=" + this.speechData + '&length=' + wordCount;
+    this._httpService.executeRequest('bp.getSubmitResponse', requestData).subscribe(
       (data: any) => {
+        console.warn("Here");
         this.zone.run(() => {
+          console.warn("Data ",data);
           this.recordingSaved = true;
           this.removeLoaderPostAllResponse();
         })
       },
       (error: any) => {
+        console.warn("error ", error);
         this.recordingSaved = true;
         this.removeLoaderPostAllResponse();
       }
     )
+  }
+
+  getWordCount(str) { 
+    return str.split(" ").length/5;
   }
 
   removeLoaderPostAllResponse() {

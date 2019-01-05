@@ -18,7 +18,7 @@ export class HttpHelperService{
         }else{
             this.headers = new HttpHeaders();
         }
-        this.checkAndUpdateHeaders(this.contentToken, 'application/json');
+        this.checkAndUpdateHeaders(this.contentToken, 'text/plain');
         return this.headers;
     }
 
